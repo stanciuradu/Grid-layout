@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  /* vreau sa am 4 colone pe fiecare rand */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* spatiu dintre coloane */
+  grid-gap: 2rem;
+  /* sectiune de cod pentru amplasarea layout-ului pe centrul paginii web */
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* stilizarea item-urilor */
+.grid .item {
+  padding: 20px 20px 20px 20px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.grid .item:first-child {
+  /* prima coloane vreau sa fie cat doua */
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: white;
+
+  /* grid-row: one-line/4; */
+}
+
+.grid .item:nth-child(9) {
+  /* coloana 9 vreau sa fie cat doua */
+  background-color: yellow;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  color: rgb(52, 10, 10);
+}
+
+.grid .item:last-child {
+  /* ultima coloana vreau sa fie cat 2 */
+  background-color: blue;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  color: white;
+}
